@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+
+/* Renkler */
+:root {
+    --primary-color: #131086;
+    --secondary-color: #b621f3;
+}
+
+/* Genel stil */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 40px;
+}
+
+.container {
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+/* Sol bölüm */
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left: 150px;
+    background-color: white;
+}
+
+/* Sağ bölüm */
+.login-right {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
+
+.login-right img {
+    width: 80%;
+}
+
+/* Giriş formu */
+.login-form {
+    width: 450px;
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.login-form-footer {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.form-item label:not(.checkboxLabel) {
+    display: inline-block;
+    background-color: white;
+}
+
+input[type='text'],
+input[type='password'] {
+    border: 1px solid black;
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 100px;
+}
+/* Ek CSS stilleri */
+.login-form-footer a:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.login-form-content input[type="text"],
+.login-form-content input[type="password"] {
+    transition: border-color 0.3s ease;
+}
+
+.login-form-content input[type="text"]:focus,
+.login-form-content input[type="password"]:focus {
+    border-color: #b621f3; /* Bu rengi kendi renk şemasına uygun olarak değiştirebilirsin */
+    outline: none;
+}
+.login-form-content button[type="submit"] {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-form-content button[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #b621f3; /* İstediğiniz renge uygun olarak değiştirebilirsiniz */
+    color: white;
+}
+.login-form-content button[type="submit"] {
+    padding: 12px 20px; /* Butonun padding değerlerini artırarak boyutunu büyütüyoruz */
+    font-size: 18px; /* Yazı boyutunu da büyütüyoruz */
+}
